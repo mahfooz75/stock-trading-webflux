@@ -1,7 +1,6 @@
 package com.selftech.springwebflux.stocktrading.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.selftech.springwebflux.stocktrading.model.Stock;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,13 +18,4 @@ public class StockResponse {
     private String name;
     private BigDecimal price;
     private String currency;
-
-    public static StockResponse fromModel(Stock stock){
-        return StockResponse.builder()
-                .id(stock.getId())
-                .name(stock.getName())
-                .price(stock.getPrice())
-                .currency(stock.getCurrency())
-                .build();
-    }
 }

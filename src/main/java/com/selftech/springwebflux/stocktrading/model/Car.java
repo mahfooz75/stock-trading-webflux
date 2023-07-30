@@ -7,16 +7,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-@Document(collection = CollectionName.STOCK)
-public class Stock {
+@Document(collection = CollectionName.CAR)
+public class Car {
     private String id;
-    private String name;
-    private BigDecimal price;
-    private String currency;
+    private String carName;
+    private String carModel;
+    private String carModelYear;
+    private String carVin;
 }
