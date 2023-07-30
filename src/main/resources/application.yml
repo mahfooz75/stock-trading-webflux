@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://m001-student:Password1@sandbox.6hhtx.mongodb.net/sample_stock
