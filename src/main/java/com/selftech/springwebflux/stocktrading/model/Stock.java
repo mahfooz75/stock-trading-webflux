@@ -19,4 +19,6 @@ public class Stock {
     private String name;
     private BigDecimal price;
     private String currency;
+    private String symbol;
+    private String sector;
 }

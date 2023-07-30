@@ -1,6 +1,5 @@
 package com.selftech.springwebflux.stocktrading.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,8 +12,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Builder
 public class StockRequest {
-    @JsonProperty("stockName")
     private String name;
     private BigDecimal price;
     private String currency;
+    private String symbol;
+    private String sector;
 }
