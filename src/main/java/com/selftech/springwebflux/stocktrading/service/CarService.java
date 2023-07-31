@@ -29,4 +29,12 @@ public class CarService {
     public Mono<CarResponse> add(CarRequest carRequest) {
         return carRepository.insert(carMapper.toModel(carRequest)).map(carMapper::fromModel);
     }
+
+    public Flux<CarResponse> getAllCars() {
+        return carRepository.findAll().map(carMapper::fromModel);
+    }
+
+    public Mono<CarResponse> getCarByVin(String vin) {
+        return carRepository.findByCarVin(vin).map(carMapper::fromModel);
+    }
 }
