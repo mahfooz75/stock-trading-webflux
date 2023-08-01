@@ -1,5 +1,6 @@
 package com.selftech.springwebflux.stocktrading.model;
 
+import com.mongodb.lang.NonNull;
 import com.selftech.springwebflux.stocktrading.constants.CollectionName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,6 +18,7 @@ import java.math.BigDecimal;
 public class Stock {
     private String id;
     private String name;
+    @NonNull
     private BigDecimal price;
     private String currency;
     private String symbol;
